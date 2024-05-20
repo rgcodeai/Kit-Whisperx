@@ -1,0 +1,14 @@
+name: whisperx-web-ui
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pytorch=2.0.0
+  - torchaudio=2.0.0
+  - conda-forge::gradio
+  - conda-forge::ffmpeg
+  - pip
+  - pip:
+      - whisperx
