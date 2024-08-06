@@ -31,6 +31,20 @@ To use WhisperX after completing the installation:
 1. Activate the corresponding Conda environment.
 2. Run **`python app.py`** to start the Gradio user interface.
 
+## Changelog
+
+### [1.1.0] - 2024-08-06
+
+- **Modified default model selection**:
+  - For CUDA-enabled devices, changed default model from "Large-v2" to "Medium"
+  - For CPU devices, kept default model as "Medium"
+
+- **Improved compute type selection**:
+  - For CPU devices, now uses "int8" compute type instead of "float32"
+  - For CUDA devices, kept "float16" compute type
+
+- **Performance**: These changes aim to balance performance and resource usage across different hardware configurations
+
 ## **Authors**
 
 - [MISTER CONTENTS](https://mistercontenidos.com/)
