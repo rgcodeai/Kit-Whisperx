@@ -13,7 +13,7 @@ class TranscriptionApp:
         """
         self.model_manager = ModelManager()
         self.default_device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.default_model = "Large-v2" if torch.cuda.is_available() else "Medium"
+        self.default_model = "Medium"  # Changed to always use "Medium" regardless of device
         self.app = gr.Blocks()
         self.outputs = {}  
         self.last_transcription_time = 0  
