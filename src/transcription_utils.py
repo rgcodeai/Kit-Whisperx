@@ -14,6 +14,7 @@ language_options = {
     "Vietnamese": "vi", "Korean": "ko", "French": "fr", "Marathi": "mr", "Turkish": "tr"
 }
 
+
 # Available models for transcription
 model_options = {
     "Large-v2": "large-v2",
@@ -23,6 +24,7 @@ model_options = {
 }
 
 # Initializes the ModelManager by setting default values and loading a model based on system capabilities (CUDA availability).
+
 class ModelManager:
     def __init__(self):
         self.current_model = None
@@ -30,7 +32,7 @@ class ModelManager:
         self.current_device = None
         if torch.cuda.is_available():
             default_device = "cuda"
-            default_model = "Large-v2"
+            default_model = "Medium"
         else:
             default_device = "cpu"
             default_model = "Medium"
@@ -39,14 +41,20 @@ class ModelManager:
     def load_model(self, model_choice, device):
         if self.current_model is None or model_choice != self.current_model_name or device != self.current_device:
             print(f"Attempting to load model: {model_choice} on device: {device}")
-            compute_type = "float32" if device == "cpu" else "float16"
+            
+            # Determine compute type based on device
+            if device == "cpu":
+                compute_type = "int8"
+            else:
+                compute_type = "float16"
+            
             self.current_model = whisperx.load_model(model_options[model_choice], device, compute_type=compute_type)
             self.current_model_name = model_choice
             self.current_device = device
         else:
             print(f"Using already loaded model: {self.current_model_name} on device: {self.current_device}")
         return self.current_model
-
+    
 # Validates if the given file path corresponds to a multimedia file (audio or video) by checking MIME types and specific file extensions.
 def validate_multimedia_file(file_path):
     file_path = os.path.normpath(file_path)
