@@ -1,15 +1,17 @@
-name: whisperx-env
+name: whisperx-venv-gpu
 channels:
   - defaults
   - conda-forge
+  - pytorch
+  - nvidia
 dependencies:
   - python=3.10
   - conda-forge::ffmpeg
   - conda-forge::numpy=1.24.4
+  - pytorch-cuda=12.1
   - pip
   - pip:
-    - gradio
-    - whisperx
-    - torch==2.1.0
-    - torchvision==0.16.0
-    - torchaudio==2.1.0
+    - gradio==5.9.1
+    - whisperx==3.3.0
+    - torch==2.2.0 --index-url https://download.pytorch.org/whl/cu121
+    - torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cu121
