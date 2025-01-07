@@ -16,7 +16,6 @@ This project enables the local installation and use of WhisperX, an advanced aud
 - **`environment-cuda.yml`**: Configuration file for automatic installation on systems with NVIDIA GPU.
 - **`environment-cpu.yml`**: Configuration file for automatic installation on systems without NVIDIA GPU.
 - **`app.py`**: Script to run the WhisperX user interface on Gradio.
-- **`transcription_utils.py`**: Transcription logic.
 
 ## **Installation**
 
