@@ -1,14 +1,15 @@
-name: whisperx-web-ui
+name: whisperx-venv-cpu
 channels:
   - defaults
   - conda-forge
   - pytorch
 dependencies:
   - python=3.10
-  - pytorch=2.0.0
-  - torchaudio=2.0.0
-  - conda-forge::gradio
   - conda-forge::ffmpeg
+  - conda-forge::numpy=1.24.4
   - pip
   - pip:
-      - whisperx
+    - gradio==5.9.1
+    - whisperx==3.3.0
+    - torch==2.2.0
+    - torchaudio==2.2.0
