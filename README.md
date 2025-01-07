@@ -1,6 +1,6 @@
 # **WhisperX Local Installation Kit**
 
-![Interface](DOCS/interface.png)
+![Interface](docs/interface.png)
 
 ## **Description**
 
