@@ -33,7 +33,7 @@ if %errorlevel% neq 0 (
     goto end
 )
 
-rem Install torch and torchaudio with CUDA 12.1 support
+rem Install torch and torchaudio 
 echo Installing torch and torchaudio...
 pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/cpu
 if %errorlevel% neq 0 (
