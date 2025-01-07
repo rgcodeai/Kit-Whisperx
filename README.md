@@ -1,5 +1,7 @@
 # **WhisperX Local Installation Kit**
 
+![Interface](DOCS/interface.png)
+
 ## **Description**
 
 This project enables the local installation and use of WhisperX, an advanced audio transcription system based on OpenAI's Whisper but optimized for running on local hardware with or without a GPU. This project is made possible thanks to [Whisperx](https://github.com/m-bain/whisperX) and [Faster Whisper](https://github.com/SYSTRAN/faster-whisper). This document provides a general overview of the installation and links to the website where the [complete installation and usage](https://mistercontenidos.com/en/how-to-install-whisperx-locally) procedure for this project can be found.
