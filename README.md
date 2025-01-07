@@ -22,6 +22,7 @@ This project enables the local installation and use of WhisperX, an advanced aud
 - **`app.py`**: Script to run the WhisperX user interface on Gradio.
 - **`setup_environment_cuda.bat`**: Batch script for easy installation on Windows with NVIDIA GPU (requires CUDA 12.1 or higher).
 - **`setup_environment_cpu.bat`**: Batch script for easy installation on Windows without NVIDIA GPU.
+- **`run_script.bat`**: Batch script to run the application after installation.
 
 ---
 
@@ -37,7 +38,7 @@ If you have an NVIDIA GPU and CUDA 12.1 (or higher) installed, you can use the `
 3. The script will:
    - Create a virtual environment.
    - Install all necessary dependencies, including GPU-optimized versions of `torch` and `torchaudio`.
-4. Once the installation is complete, activate the virtual environment and run the application.
+4. Once the installation is complete, you can run the application by double-clicking the `run_script.bat` file.
 
 #### **2. Users without NVIDIA GPU**:
 If you do not have an NVIDIA GPU, use the `setup_environment_cpu.bat` script:
@@ -47,7 +48,7 @@ If you do not have an NVIDIA GPU, use the `setup_environment_cpu.bat` script:
 3. The script will:
    - Create a virtual environment.
    - Install all necessary dependencies, including CPU-only versions of `torch` and `torchaudio`.
-4. Once the installation is complete, activate the virtual environment and run the application.
+4. Once the installation is complete, you can run the application by double-clicking the `run_script.bat` file.
 
 ---
 
@@ -65,8 +66,14 @@ For a detailed step-by-step installation process, please visit our website: [Vie
 
 To use WhisperX after completing the installation:
 
-1. Activate the corresponding Conda environment.
-2. Run **`python app.py`** to start the Gradio user interface.
+1. **For Windows Users**:
+   - Simply double-click the `run_script.bat` file. This will:
+     - Activate the virtual environment.
+     - Run the Gradio user interface (`app.py`).
+
+2. **For Other Platforms**:
+   - Activate the corresponding Conda environment.
+   - Run **`python app.py`** to start the Gradio user interface.
 
 ---
 
