@@ -1,4 +1,4 @@
-name: whisperx-venv-gpu
+name: whisperx-web-ui
 channels:
   - defaults
   - conda-forge
