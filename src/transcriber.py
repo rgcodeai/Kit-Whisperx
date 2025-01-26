@@ -6,7 +6,7 @@ from src.utils import validate_multimedia_file, convert_to_wav, save_transcripti
 
 LANGUAGE_OPTIONS = {
     "Identify": None,
-    "English": "en", "Spanish": "es", "Chinese": "zh", "Hindi": "hi", "Arabic": "ar",
+    "English": "en", "Spanish": "es", "Italian": "it", "Chinese": "zh", "Hindi": "hi", "Arabic": "ar",
     "Portuguese": "pt", "Bengali": "bn", "Russian": "ru", "Japanese": "ja", "Punjabi": "pa",
     "German": "de", "Javanese": "jv", "Wu Chinese": "zh", "Malay": "ms", "Telugu": "te",
     "Vietnamese": "vi", "Korean": "ko", "French": "fr", "Marathi": "mr", "Turkish": "tr"
