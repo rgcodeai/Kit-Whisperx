@@ -1,29 +1,36 @@
 @echo off
-rem Activates the virtual environment required for the project
-echo Activating virtual environment...
+setlocal
+
+rem Activate virtual environment
 call venv\Scripts\activate.bat
 
-rem Checks if the virtual environment was activated successfully
+rem Check if virtual environment was activated
 if %errorlevel% neq 0 (
-    echo Error activating virtual environment.
-    goto end
+    echo ERROR: Could not activate virtual environment.
+    echo Please verify that 'venv' folder exists.
+    echo.
+    pause
+    exit /b 1
 )
 
-rem Runs the Python script that performs the desired task
-echo Running Python script...
+echo ========================================
+echo Virtual environment activated.
+echo ========================================
+
+echo.
+echo To stop: Ctrl+C
+echo.
+
+echo ========================================
+echo Starting server. Please wait...
+echo ========================================
+echo.
+
+rem Run Gradio application
 python app.py
 
-rem Checks if the Python script ran successfully
-if %errorlevel% neq 0 (
-    echo Error running Python script.
-    goto end
-)
-
-rem Displays a success message if the Python script executed without errors
+rem Message when server is closed
 echo.
-echo Script executed successfully.
-
-:end
-rem Label to jump to if there is an error in any of the previous operations or when finishing the script
-echo Press any key to close...
-pause > nul
+echo Server stopped.
+echo.
+pause
